@@ -40,6 +40,7 @@ int main(void){
     printf("z/w=%lf\n", z/w);
     printf("x+z=%lf\n", x+z);
     printf("x+z*y=%lf\n", x+z*y);
+    return 0;
     */
     
 }
