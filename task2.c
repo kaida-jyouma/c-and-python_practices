@@ -15,9 +15,9 @@ int main(void){
     int x = 5;
     int y = 7;
     int z = 9;
-    printf("x= %d", x);
-    printf("y= %d", y);
-    printf("z= %d", z);
+    printf("x= %d\n", x);
+    printf("y= %d\n", y);
+    printf("z= %d\n", z);
     return 0;
     */
 
