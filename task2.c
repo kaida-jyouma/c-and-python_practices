@@ -23,24 +23,24 @@ int main(void){
     return 0;
     */
     
-    /*
+    
     // task2-3
     int x, y;
     double z, w;
-    scanf("%d %d", &x, &y);
-    scanf("%lf %lf", &z, &w);
-    printf("x+y=%d\n", x+y);
-    printf("x-y=%d\n", x-y);
-    printf("x*y=%d\n", x*y);
-    printf("x/y=%d\n", x/y);
-    printf("x%y=%d\n", x%y);
-    printf("z+w=%lf\n", z+w);
-    printf("z-w=%lf\n", z-w);
-    printf("z*w=%lf\n", z*w);
-    printf("z/w=%lf\n", z/w);
-    printf("x+z=%lf\n", x+z);
-    printf("x+z*y=%lf\n", x+z*y);
+    scanf("%d %d", &x, &y); // scan x and y
+    scanf("%lf %lf", &z, &w); // scan z and w
+    printf("x+y=%d\n", x+y); // display x+y
+    printf("x-y=%d\n", x-y); // display x-y
+    printf("x*y=%d\n", x*y); // display x*y
+    printf("x/y=%d\n", x/y); // display x/y
+    printf("x%y=%d\n", x%y); // display x%y
+    printf("z+w=%lf\n", z+w); // display z+w
+    printf("z-w=%lf\n", z-w); // display z-w
+    printf("z*w=%lf\n", z*w); // display z*w
+    printf("z/w=%lf\n", z/w); // display z/w
+    printf("x+z=%lf\n", x+z); // display z+w
+    printf("x+z*y=%lf\n", x+z*y); // display x+z*y
     return 0;
-    */
+    
     
 }
