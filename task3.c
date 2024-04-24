@@ -11,6 +11,7 @@ int main(void){
     }else if (a == 0.2 || a == 3){
         printf("%lf", 3.14); // my student number is 2610240070......
     }
+    return 0;
     
 
     
@@ -27,6 +28,7 @@ int main(void){
     }else{
         printf("閏年でない");
     }
+    return 0;
     */
     
 }
