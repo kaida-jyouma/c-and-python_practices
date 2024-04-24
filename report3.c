@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void){
-    printf("input 'even prime-number':"); // ask question
+    printf("Enter an even prime number:"); // ask question
     int n; // define "n"
     scanf("%d", &n);
     if (n == 2){
