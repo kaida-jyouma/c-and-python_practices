@@ -10,6 +10,6 @@ for i in range(4): # bread_max: 4pcs
     if money >= bread: # if we can buy bread
         money -= bread # buy bread
     else: # if we cannot buy bread
-        break # quit purchase
+        break # stop purchase
 
 print(money)
