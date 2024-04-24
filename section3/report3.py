@@ -27,8 +27,6 @@ else: # if correct
         print("your calculation speed is super fast!!!")
     elif past <= 8:
         print("your calculation speed is very fast!!")
-    elif past <= 9:
-        print("your calculation speed is so fast!")
     elif past <= 10:
         print("your calculation speed is fast.")
     elif past <= 25:
