@@ -35,6 +35,7 @@ def los(a=None, degA=None, r_2r=None):
     from math import sin, asin, radians
     if [a, degA, r_2r].count(None) > 1:
         return -1
+        
     else:
         if r_2r == None:
             return a / sin(radians(degA))
