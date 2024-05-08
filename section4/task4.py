@@ -4,6 +4,7 @@ def loc(a, b=None, c=None, degAB=None):
     import math as mt
     if [a, b, c, degAB].count(None) > 1:
         return -1
+
     else:
         if c == None:
             # deg => rad
@@ -28,9 +29,9 @@ def loc(a, b=None, c=None, degAB=None):
             return mt.degrees(sp.acos(fom))
         
         else:
-            # maybe unnecessary...
+            # maybe unnecessary... -> necessary !
             return -2
-
+            
 def los(a=None, degA=None, r_2r=None):
     from math import sin, asin, radians
     if [a, degA, r_2r].count(None) > 1:
