@@ -28,7 +28,7 @@ def loc(a, b=None, c=None, degAB=None):
             return mt.degrees(sp.acos(fom))
         
         else:
-            # maybe unnecessary......
+            # maybe unnecessary...
             return -2
 
 def los(a=None, degA=None, r_2r=None):
