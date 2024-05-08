@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <vector>
 
 int calcSum(int req){
     int ret = 0;
