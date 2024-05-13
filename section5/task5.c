@@ -47,7 +47,7 @@ int main(){
     // printf("%f\n", gcd(3289, 5083));
     int n, m;
     scanf("%d %d\n", &n, &m);
-    printf("&lf", lcm(n, m));
+    printf("%lf", lcm(n, m));
     return 0;
 }
 // */
