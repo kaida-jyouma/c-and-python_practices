@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // 5task2
-// /*
+/*
 double factorial(int n){
     double ans = 1;
     for (int i=n;i>0;i--) ans *= i;
@@ -18,18 +18,19 @@ int main(){
     printf("%f\n", comb(m, n));
     return 0;
 }
-// */
+*/
 
 // 5task42
 // /*
 double gcd(int n, int m){
     // convert x > y
-    if (n > m){
-        int x = n;
-        int y = m;
+    int x, y = 0;
+    if (n >= m){
+        x = n;
+        y = m;
     }else if (n < m){
-        int x = m;
-        int y = n;
+        x = m;
+        y = n;
     }
     if (y == 0){
         return x;
@@ -39,11 +40,14 @@ double gcd(int n, int m){
 }
 
 double lcm(int n, int m){
-    
+    return (n * m) / gcd(n, m);
 }
 
 int main(){
-    printf("%d\n", gcd(6, 3));
+    // printf("%f\n", gcd(3289, 5083));
+    int n, m;
+    scanf("%d %d\n", &n, &m);
+    printf("&lf", lcm(n, m));
     return 0;
 }
 // */
