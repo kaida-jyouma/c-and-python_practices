@@ -2,7 +2,7 @@
 #include <math.h>
 
 double arctan_ord20(double x){
-    double n;
+    double n = 0;
     for (int i=1;i<=20;i++) n += (pow((-1), (i-1)) * pow(x, 2*i - 1)) / (2*i - 1);
     return n;
 }
