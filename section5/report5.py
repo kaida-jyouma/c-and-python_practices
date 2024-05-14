@@ -14,7 +14,7 @@ while True:
 
 # extra
 
-# detect now time (1/100sec)
+# 01: detect now time (1/100sec)
 
 from time import time
 ct = 0
