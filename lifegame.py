@@ -1,8 +1,4 @@
-import numpy as np
-import matplotlib.pyplot as plt
 import random as rdm
-
-
 
 # make life game
 
@@ -16,7 +12,7 @@ def update_cell(x, y, fld, rowmax, colmax, lv=1, dd=0):
 		elif y == colmax - 1:
 			nearby = [fld[0][-2], fld[1][-2], fld[1][-1]]
 		else:
-			nearby = [fld[0][y-1], fld[0][y+1]].extend(fld[1][y-1:y+2])
+			nearby = [fld[0][y-1], fld[0][y+1], fld[1][y-1], fld[1][y], fld[1][y+1]]
 
 	elif x == rowmax - 1:
 		if y == 0:
@@ -24,7 +20,7 @@ def update_cell(x, y, fld, rowmax, colmax, lv=1, dd=0):
 		elif y == colmax - 1:
 			nearby = [fld[-2][-2], fld[-2][-1], fld[-1][-2]]
 		else:
-			nearby = [fld[-1][y-1], fld[-1][y+1]].extend(fld[-2][y-1:y+2])
+			nearby = [fld[-2][y-1], fld[-2][y], fld[-2][y+1], fld[-1][y-1], fld[-1][y+1]]
 
 	else:
 		if y == 0:
@@ -67,7 +63,7 @@ field = [[rdm.randint(0, 1) for c in range(10)] for d in range(10)]
 
 # generatioins: 100
 for g in range(100):
-	print(field)
+	print("\n".join(list(map(str, fld))))
 	next_gen = [[0 for c in range(10)] for d in range(10)]
 	for i in range(len(field)):
 		for j in range(len(field[i])):
