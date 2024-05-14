@@ -63,9 +63,11 @@ field = [[rdm.randint(0, 1) for c in range(10)] for d in range(10)]
 
 # generatioins: 100
 for g in range(100):
-	print("\n".join(list(map(str, fld))))
+	print("\n".join(list(map(str, field))))
+	print()
 	next_gen = [[0 for c in range(10)] for d in range(10)]
 	for i in range(len(field)):
 		for j in range(len(field[i])):
 			next_gen[i][j] = update_cell(i, j, field, 10, 10, 1, 0)
+	field = next_gen
 	
