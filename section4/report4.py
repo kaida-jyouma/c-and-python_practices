@@ -1,4 +1,4 @@
-# geogebra => https://geogebra.org/classic/myywsnu4]
+# geogebra => https://geogebra.org/classic/myywsnu4
 
 from math import sin, cos, asin
 
