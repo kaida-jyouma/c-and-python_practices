@@ -15,6 +15,7 @@ import sys
 
 n, m = map(int, input("input 2 number with space: ").split())
 
+# switch function by python3-version
 if sys.version_info.minor >= 9:
     from math import lcm
     print(lcm(n, m))
