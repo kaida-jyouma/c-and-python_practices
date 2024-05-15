@@ -11,6 +11,14 @@ print(leibniz_pi(100))
 
 # 5task41
 
-from math import lcm
-n, m = map(int, input().split())
-print(lcm(n, m))
+import sys
+
+n, m = map(int, input("input 2 number with space: ").split())
+
+if sys.version_info.minor >= 9:
+    from math import lcm
+    print(lcm(n, m))
+
+else:
+    from math import gcd
+    print(n * m / gcd(n, m))
