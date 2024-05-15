@@ -1,6 +1,6 @@
 # play with terminal
 
-# now construction......
+# under construction......
 def makefield(row, col):
     from math import floor
     from random import randint as ri
@@ -8,5 +8,20 @@ def makefield(row, col):
     # define filed size
     sq = row * col
     
+    fld = []
+    
+    # bomb counter
+    bnum = 0
+
     # make field and set bomb ratio as 15%
-    fld = [["x" if ri(0, 99) < 15 else "o" for c in range(col)] for d in range(row)]
+    for i in range(row):
+        fl = ["x" if ri(0, 99) < 15 else "o" for c in range(col)]
+        bnum += fl.count("x") # count bomb
+        fld.append(fl)
+    
+
+
+    return 
+
+
+
