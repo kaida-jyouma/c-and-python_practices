@@ -32,6 +32,8 @@ double gcd(int n, int m){
         x = m;
         y = n;
     }
+
+    // run Euclidean Algorithm
     if (y == 0){
         return x;
     }else{
