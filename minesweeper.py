@@ -17,11 +17,11 @@ def makefield(row, col):
     for i in range(row):
         fl = ["x" if ri(0, 99) < 15 else "o" for c in range(col)]
         bnum += fl.count("x") # count bomb
-        fld.append(fl)
-    
+        fld.append(fl) 
+
+    return {bnum: fld}
 
 
-    return 
 
 
 
