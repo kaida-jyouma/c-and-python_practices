@@ -84,4 +84,7 @@ def game():
 	# set flag (number)
     for i in range(fld_row):
         for j in range(fld_col):
-            val = detect_mine(i, y)
+            val = detect_mine(i, j)
+			fld[i][j] = val
+	
+	
