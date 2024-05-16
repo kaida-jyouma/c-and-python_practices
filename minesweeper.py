@@ -1,4 +1,4 @@
-# play with terminal
+# play on terminal
 
 # under construction......
 def detect_mine(x, y, fld, rowmax, colmax, mine="o", grd="x"):
@@ -59,10 +59,20 @@ def makefield(row, col):
 
     return {"bnum": bnum, "fld": fld}
 
+
 def game():
 
     fld_row = 14
     fld_col = 18
 
-    fld = makefield(fld_row, fld_col)["fld"]
+    fld_data = makefield(fld_row, fld_col)
+    fld_b = fld_data["fld"]
+    bnum = fld_data["bnum"]
     
+    plyfld = [["v" for c in range(fld_col)] for d in range(fld_row)]
+
+    fld = [["x" for c in range(fld_col)] for d in range(fld_row)]
+    
+    for i in range(fld_row):
+        for j in range(fld_col):
+            val = detect_mine(i, y)
