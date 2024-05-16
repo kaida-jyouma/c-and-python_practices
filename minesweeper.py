@@ -65,7 +65,7 @@ def makefield(row, col):
 
 
 def dig(x, y, field, cover, mine="o", grd="x"):
-	# row = x, col = y
+	# row = x, col = y (start: 0 => n)
 	# cover(arr) => change (return)
 	# field(arr) => not change
 
@@ -73,10 +73,28 @@ def dig(x, y, field, cover, mine="o", grd="x"):
 		# gameover
 		return field
 
-	elif field[x][y] == grd:
-		# dig around
-		# recursive function
+	# elif field[x][y] == grd:
+		# dig around -> throw away
+
+		"""
+		# leftside
+		for i in range(y):
+			tgt_cell = field[x][y-1-i]
+			cover[x][y-1-i] = tgt_cell
+			
+			if tgt_cell != grd:
+				break
 		
+		# rightside
+		for i in range(y):
+			tgt_cell = field[x][y+1+i]
+			cover[x][y+1+i] = tgt_cell
+
+			if tgt_cell != grd:
+				break
+
+		"""
+
 
 	else:
 		# dig only target cell
