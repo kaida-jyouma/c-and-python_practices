@@ -64,6 +64,26 @@ def makefield(row, col):
     return {"bnum": bnum, "fld": fld}
 
 
+def dig(x, y, field, cover, mine="o", grd="x"):
+	# row = x, col = y
+	# cover(arr) => change (return)
+	# field(arr) => not change
+
+	if field[x][y] == mine:
+		# gameover
+		return field
+
+	elif field[x][y] == grd:
+		# dig around
+		# recursive function
+		
+
+	else:
+		# dig only target cell
+		cover[x][y] = field[x][y]
+		return cover
+
+
 def game():
 
 	# define field size
@@ -86,5 +106,4 @@ def game():
         for j in range(fld_col):
             val = detect_mine(i, j)
 			fld[i][j] = val
-	
 	
