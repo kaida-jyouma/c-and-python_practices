@@ -95,7 +95,6 @@ def dig(x, y, field, cover, mine="o", grd="x"):
 
 		"""
 
-
 	else:
 		# dig only target cell
 		cover[x][y] = field[x][y]
