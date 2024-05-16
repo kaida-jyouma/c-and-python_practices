@@ -5,6 +5,8 @@ def detect_mine(x, y, fld, rowmax, colmax, mine="o", grd="x"):
 	# row = x, col = y
 	
 	# get situation around target cell
+	
+	# top side
 	if x == 0:
 		if y == 0:
 			nearby = [fld[0][1], fld[1][0], fld[1][1]]
@@ -13,6 +15,7 @@ def detect_mine(x, y, fld, rowmax, colmax, mine="o", grd="x"):
 		else:
 			nearby = [fld[0][y-1], fld[0][y+1], fld[1][y-1], fld[1][y], fld[1][y+1]]
 
+	# bottom side
 	elif x == rowmax - 1:
 		if y == 0:
 			nearby = [fld[-2][0], fld[-2][1], fld[-1][1]]
@@ -21,6 +24,7 @@ def detect_mine(x, y, fld, rowmax, colmax, mine="o", grd="x"):
 		else:
 			nearby = [fld[-2][y-1], fld[-2][y], fld[-2][y+1], fld[-1][y-1], fld[-1][y+1]]
 
+	# other
 	else:
 		if y == 0:
 			nearby = [fld[x-1][y], fld[x-1][y+1], fld[x][y+1], fld[x+1][y], fld[x+1][y+1]]
@@ -54,7 +58,7 @@ def makefield(row, col):
     # make field and set bomb ratio as 15%
     for i in range(row):
         fl = ["o" if ri(0, 99) < 15 else "x" for c in range(col)]
-        bnum += fl.count("x") # count bomb
+        bnum += fl.count("o") # count bomb
         fld.append(fl) 
 
     return {"bnum": bnum, "fld": fld}
@@ -62,17 +66,22 @@ def makefield(row, col):
 
 def game():
 
+	# define field size
     fld_row = 14
     fld_col = 18
 
+	# create field(base)
     fld_data = makefield(fld_row, fld_col)
     fld_b = fld_data["fld"]
     bnum = fld_data["bnum"]
     
-    plyfld = [["v" for c in range(fld_col)] for d in range(fld_row)]
+    # create coverfield
+	plyfld = [["v" for c in range(fld_col)] for d in range(fld_row)]
 
+	# create playfield
     fld = [["x" for c in range(fld_col)] for d in range(fld_row)]
     
+	# set flag (number)
     for i in range(fld_row):
         for j in range(fld_col):
             val = detect_mine(i, y)
