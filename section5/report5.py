@@ -19,7 +19,7 @@ while True:
 from time import time
 ct = 0
 while True:
-    dt = input("detect now time (input 2-digit number): "))
+    dt = input("detect now time (input 2-digit number): ")
     t = str(time()).split(".")[1][:2]
     if dt == t or ct > 10:
         print("Success!")
