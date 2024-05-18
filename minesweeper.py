@@ -104,23 +104,23 @@ def dig(x, y, field, cover, mine="o", grd="x"):
 def game():
 
 	# define field size
-    fld_row = 14
-    fld_col = 18
+	fld_row = 14
+	fld_col = 18
 
 	# create field(base)
-    fld_data = makefield(fld_row, fld_col)
-    fld_b = fld_data["fld"]
-    bnum = fld_data["bnum"]
-    
+	fld_data = makefield(fld_row, fld_col)
+	fld_b = fld_data["fld"]
+	bnum = fld_data["bnum"]
+	
     # create coverfield
 	plyfld = [["v" for c in range(fld_col)] for d in range(fld_row)]
 
 	# create playfield
-    fld = [["x" for c in range(fld_col)] for d in range(fld_row)]
+	fld = [["x" for c in range(fld_col)] for d in range(fld_row)]
     
 	# set flag (number)
-    for i in range(fld_row):
-        for j in range(fld_col):
-            val = detect_mine(i, j)
+	for i in range(fld_row):
+		for j in range(fld_col):
+			val = detect_mine(i, j)
 			fld[i][j] = val
 	
