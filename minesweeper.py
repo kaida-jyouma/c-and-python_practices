@@ -40,7 +40,7 @@ def detect_mine(x, y, fld, rowmax, colmax, mine="o", grd="x"):
 	
 	elif fld[x][y] == grd:
 		density = nearby.count(mine)
-		return density
+		return density if density > 0 else grd
 
 
 def makefield(row, col):
@@ -121,6 +121,10 @@ def game():
 	# set flag (number)
 	for i in range(fld_row):
 		for j in range(fld_col):
-			val = detect_mine(i, j)
+			val = detect_mine(i, j, fld_b, fld_row, fld_col)
 			fld[i][j] = val
+	
+	# debug for fld
+	print("\n".join([" ".join([str(d) for d in c]) for c in fld]))
+
 	
