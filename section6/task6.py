@@ -1,3 +1,22 @@
+# 6task32.py
+
+def raiseprimes(mxm):
+    from math import sqrt, floor
+    sq = sqrt(mxm)
+    ls = list(range(2, floor(mxm)))
+    primes = [2]
+    subls = []
+    for i in range(len(ls)):
+        if ls[i] % primes[-1] != 0:
+            subls.append(ls[i])
+    
+
+
+
+"""
+
+# 6task4.py
+
 def cat_tomorrow(n, m):
     return n - (15/100)*n + (5/100)*m
 
@@ -33,3 +52,5 @@ for i in range(1, 36):
     print(i, "days, ", int(n1), "/", int(m1))
     n = n1
     m = m1
+
+"""
