@@ -1,18 +1,22 @@
 #include <stdio.h>
 
-int main(){
-	printf("continue until you input odd number 5 times");
+int main(void){
+	printf("continue until you input odd number 5 times\n");
+
 	int ct = 0;
+	int x = 0;
+	printf("input number:");
+	scanf(" %d ", &x);
 	while (ct < 5){
-		int x;
-		scanf("input number: %d", &x);
 		if (x % 2 == 1){
 			ct ++;
-			printf("%d time(s) left...", 5 - ct);
+			printf("%d time(s) left...\n", 5 - ct);
 		}else{
 			ct = 0;
-			printf("it's an even number...");
+			printf("it's an even number...\n");
 		}
+		printf("input number:");
+		scanf(" %d ", &x);
 	}
-	printf("complete");
+	printf("complete\n");
 }
