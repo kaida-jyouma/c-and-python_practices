@@ -4,7 +4,8 @@
 def raiseprimes(mxm):
     from math import sqrt, floor
     sq_f = floor(sqrt(mxm))
-    nonprimes = [[c if c % d == 0 for c in range(mxm)] for d in range(2, sq_f + 1)]
+    nonprimes = [[c for c in range(2, mxm + 1) if c % d == 0][1:] for d in range(2, sq_f + 1)]
+    primes = list(set(range(2, 100)) - set(sum(nonprimes, [])))
     
     
     
