@@ -1,14 +1,38 @@
 # 6task32.py
 
+"""
 # Sieve of Eratosthenes
 def raiseprimes(mxm):
     from math import sqrt, floor
     sq_f = floor(sqrt(mxm))
     nonprimes = [[c for c in range(2, mxm + 1) if c % d == 0][1:] for d in range(2, sq_f + 1)]
     primes = list(set(range(2, 100)) - set(sum(nonprimes, [])))
-    
-    
-    
+    return primes
+
+def prf_fact(x):
+    from math import sqrt
+    primes = raiseprimes(x)
+    factors = []
+    for i in primes:
+        if x % i == 0:
+            factors.append(i)
+    return factors
+"""
+
+def primefactorial(x):
+    # ref: https://algo-method.com/descriptions/119
+    n = 2
+    ans = []
+    while n * n <= x:
+        ct = 0
+        while x % n == 0:
+            ct += 1
+            x = int(x / n)
+        ans.append([n, ct])
+        n += 1
+    if x > 1:
+        ans.append([x, 1])
+    return ans
 
 
 
