@@ -1,14 +1,12 @@
 # 6task32.py
 
+# Sieve of Eratosthenes
 def raiseprimes(mxm):
     from math import sqrt, floor
-    sq = sqrt(mxm)
-    ls = list(range(2, floor(mxm)))
-    primes = [2]
-    subls = []
-    for i in range(len(ls)):
-        if ls[i] % primes[-1] != 0:
-            subls.append(ls[i])
+    sq_f = floor(sqrt(mxm))
+    nonprimes = [[c if c % d == 0 for c in range(mxm)] for d in range(2, sq_f + 1)]
+    
+    
     
 
 
