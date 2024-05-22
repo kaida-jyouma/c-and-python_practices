@@ -14,4 +14,4 @@ for i in range(1, 361):
 	m = rab_nxt(m, m, k)
 	k = grs_nxt(m, k)
 	if i % 10 == 0:
-		print(" / ".join([n, m, k]))
+		print(" , ".join([str(n), str(m), str(k)]))
