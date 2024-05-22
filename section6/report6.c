@@ -2,6 +2,7 @@
 #include <math.h>
 #include <time.h>
 
+// return digits in binary
 int keta2(int n){
 	int m = 0;
 	while (n > 0){
@@ -11,6 +12,7 @@ int keta2(int n){
 	return m;
 }
 
+// return floor(cbrt(n))
 double cubicrt(int n){
 	double k = ((keta2(n) - 1) - ((keta2(n) - 1) % 3)) / 3;
 	double m = pow(2.0, k);
@@ -22,6 +24,7 @@ double cubicrt(int n){
 	return m;
 }
 
+// check cbrt(n) include "Z"
 int check_cubic(int n){
 	if (pow(cubicrt(n), 3.0) == (double)n){
 		return 1;
@@ -29,6 +32,7 @@ int check_cubic(int n){
 		return 0;
 	}
 }
+
 
 int check_cubic_sum(int n){
 	double l = cubicrt((n - (n % 2)) / 2);
