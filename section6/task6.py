@@ -44,11 +44,14 @@ print()
 
 # 6task4.py
 
+# decreasing model
 def cat_tomorrow(n, m):
-    return n - (10/100)*n + (3/100)*m
+    return n - (16/100)*n + (1/100)*m
+    # return n - (10/100)*n + (3/100)*m
 
 def rab_tomorrow(n, m):
-    return m - (5/100)*n + (5/100)*m
+    return m - (6/100)*n + (1/100)*m
+    # return m - (5/100)*n + (5/100)*m
 
 def cat_10days(n, m):
     for i in range(10):
