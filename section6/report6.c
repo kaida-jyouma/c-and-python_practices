@@ -33,7 +33,7 @@ int check_cubic(int n){
 	}
 }
 
-
+// check the number represented in 2 ways 
 int check_cubic_sum(int n){
 	double l = cubicrt((n - (n % 2)) / 2);
 	int times = 0;
