@@ -41,10 +41,10 @@ def primefactorial(x):
 # 6task4.py
 
 def cat_tomorrow(n, m):
-    return n - (15/100)*n + (5/100)*m
+    return n - (10/100)*n + (3/100)*m
 
 def rab_tomorrow(n, m):
-    return m - (3/100)*n + (1/100)*m
+    return m - (5/100)*n + (5/100)*m
 
 def cat_10days(n, m):
     for i in range(10):
