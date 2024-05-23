@@ -35,6 +35,10 @@ def primefactorial(x):
     return ans
 
 
+for i in primefactorial(int(input())):
+    print(" ".join([str(i[0]) for c in range(i[1])]), end=" ")
+print()
+
 
 """
 
