@@ -60,6 +60,7 @@ int main(){
 		}
 		if (i % 1000000 == 0){
 			time_t nt = time(NULL);
+			// Monitor detecting numbers
 			printf("%d %ld\n", i, nt - st);
 		}
 
