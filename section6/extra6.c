@@ -2,6 +2,8 @@
 #include <math.h>
 #include <time.h>
 
+// recommend multi-task
+
 // return digits in binary
 int keta2(int n){
 	int m = 0;
