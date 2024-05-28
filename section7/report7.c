@@ -10,10 +10,14 @@ double sameDayInAd1(double dateNum){
 	// double tdate = target % 100;
 
 	if (year > 1){
-		
+		if (year > 400){
+			return sameDayInAd1(year * 10000 + month * 100 + date);
+		}else if (year > 100){
+			
+		}
 
 
-	}else if (){
+	}else if (year < 1){
 
 	}else{
 
