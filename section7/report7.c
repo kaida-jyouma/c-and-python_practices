@@ -86,7 +86,7 @@ int checkDayInAd1(double dateNumAd1){
 		past += 730;
 	}
 	
-	// printf("%d\n", past);
+	// printf("%d\n", past); // debug
 
 	// 0: Sun, 1: Mon, 2: Tue, 3: Wed, 4: Thu, 5: Fri, 6: Sat
 	return past % 7;
