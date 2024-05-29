@@ -46,8 +46,8 @@ int main(){
 	double month = 5;
 	double date = 29;
 	int y, m, d;
-	printf("input yyyymmdd:");
-	scanf("")
+	printf("input yyyy mm dd:");
+	scanf("%d %d %d", &y, &m, &d);
 	year = (double)y;
 	month = (double)m;
 	date = (double)d;
