@@ -21,6 +21,7 @@ int main(){
 
 // 7task3.c
 
+/*
 int checkSign4(int a, int b, int c, int d){
 	int ct = 0;
 	int ls[4] = {a, b, c, d};
@@ -48,7 +49,7 @@ int main(){
 						continue;
 					}else{
 						printf("%d %d %d %d , ", i+1, j+1, k+1, l+1);
-						printf("%d\n", checkSign4(i, j, k, l))
+						printf("%d\n", checkSign4(i, j, k, l));
 					}
 				}
 			}
@@ -56,6 +57,7 @@ int main(){
 	}
 
 }
+*/
 
 // 7task4.c
 

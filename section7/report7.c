@@ -1,14 +1,18 @@
 #include <stdio.h>
+#include <math.h>
 
 // return same "DAY" date in AD1
 double sameDayInAd1(double dateNum){
 	// dateNum = yyyymmdd
+	int bc = 0;
+	if (dateNum < 1) bc = 1;
+	dateNum = fabs(dateNum);
 	double year = (dateNum - (int)dateNum % 10000) / 10000;
 	double month = ((dateNum - year * 10000) - (int)(dateNum - year * 10000) % 100) / 100;
 	double date = (int)dateNum % 100;
 	// printf("%lf\n", dateNum); // debug
 	
-	if (year > 1){
+	if (year > 1 && bc == 0){
 		// AD XXXX
 		if (year > 400){
 			return sameDayInAd1(((int)(year - 400) % 400) * 10000 + month * 100 + date);
@@ -38,9 +42,9 @@ double sameDayInAd1(double dateNum){
 			}
 		}
 
-	}else if (year < 1){
-		// BC XXXX
-		return year * 10000 + month * 100 + date;
+	}else if (bc == 1){
+		// BC XXXX -> throw away
+		return sameDayInAd1(dateNum);
 	}else{
 		// AD1
 		// printf("comp\n"); // debug
@@ -86,7 +90,7 @@ int checkDayInAd1(double dateNumAd1){
 		past += 730;
 	}
 	
-	// printf("%d\n", past); // debug
+	// printf("%d\n", past);
 
 	// 0: Sun, 1: Mon, 2: Tue, 3: Wed, 4: Thu, 5: Fri, 6: Sat
 	return past % 7;
