@@ -21,3 +21,8 @@ print(" ".join([c for c in range(1, 101) if c % 4 == 0]))
 
 #q5
 print(" ".join([c for c in range(1, 101) if c % 12 == 0]))
+
+# variance
+def variance(ls):
+	from statistics import mean
+	return sum([(c - mean(ls)) ** 2 for c in ls])/len(ls)
