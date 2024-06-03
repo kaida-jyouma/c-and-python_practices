@@ -19,8 +19,6 @@ def tensuu_phy(i):
 def tensuu_pro(i):
 	return tensuu_seisei(i, 10000, 20000, 40000)
 
-
-
 lmat = [tensuu_mat(c) for c in range(0o1, 0o145)]
 leng = [tensuu_eng(c) for c in range(1, 0x65)]
 lphy = [tensuu_phy(c) for c in range(0x1, 101)]
@@ -43,6 +41,28 @@ print(cov(leng, lphy))
 print(cov(leng, lpro))
 print(cov(lphy, lpro))
 
+import numpy as np
+import matplotlib.pyplot as plt
+
+# mt and en
+plt.scatter(lmat, leng, color="lawngreen", marker=".")
+plt.show()
+
+# mt and pro
+plt.scatter(lmat, lpro, color="deepskyblue", marker=",")
+plt.show()
+
+# draw pie chart
+dataList = [
+	[c for c in lphy if c < 60],
+	[c for c in lphy if c >= 60 and c < 70],
+	[c for c in lphy if c >= 70 and c < 80],
+	[c for c in lphy if c >= 80 and c < 90],
+	[c for c in lphy if c >= 90]
+]
+labels = [chr(c) for c in [70, 67, 66, 65, 83]]
+plt.pie([len(c) for c in dataList], labels=labels)
+plt.show()
 
 # 8task22
 
@@ -57,3 +77,42 @@ def raiseprimes(mxm):
 print(raiseprimes(10000))
 # print(len(raiseprimes(10000))) # debug
 print([c for n, c in enumerate(raiseprimes(10000)) if n % 111 == 1 and n > 111])
+print()
+
+# 8task31
+
+# Under Construction......
+
+
+# 8task32
+
+from random import randint as rint
+tryCount = 10000000
+
+# Unchange
+hitU = 0
+for i in range(tryCount):
+	ans = rint(1, 4)
+	first = rint(1, 4)
+	
+	if ans == first:
+		hitU += 1
+
+print(hitU/tryCount)
+
+# Change
+hitC = 0
+for i in range(tryCount):
+	ans = rint(1, 4)
+	first = rint(1, 4)
+	
+	other = [c for c in [1, 2, 3, 4] if c != ans and c != first]
+	fail = other[rint(0, len(other) - 1)]
+	
+	secondls = [c for c in [1, 2, 3, 4] if c != first and c != fail]
+	second = secondls[rint(0, len(secondls) - 1)]
+	
+	if ans == second:
+		hitC += 1
+
+print(hitC/tryCount)
