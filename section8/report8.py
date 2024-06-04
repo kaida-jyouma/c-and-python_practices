@@ -1,3 +1,10 @@
+# Basic
+
+
+
+
+# Extra
+
 # calculate pi with Monte Carlo method
 import math as mt
 import random as rdm
