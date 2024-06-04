@@ -81,7 +81,7 @@ print()
 
 # 8task31
 
-# Under Construction...... (error?)
+# Under Construction...... (error?) => done
 from numpy import array as arr
 n, m, k = [750, 3500, 1000]
 fields = arr([[n], [m], [k]])
