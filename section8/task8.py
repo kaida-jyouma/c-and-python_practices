@@ -91,6 +91,9 @@ for i in range(360):
 	plt.plot(i + 1, fields[1, 0], color="deepskyblue", marker=",")
 	plt.plot(i + 1, fields[2, 0], color="darkorange", marker=",")
 
+plt.grid()
+plt.xlabel("days")
+plt.ylabel("numbers")
 plt.legend()
 plt.show()
 
