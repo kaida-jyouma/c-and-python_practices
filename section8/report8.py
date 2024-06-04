@@ -1,5 +1,37 @@
 # Basic
+tryCount=10000
+points = 10
 
+def dice(n):
+    from random import randint as rint
+    pt = rint(0, 99)
+    dl = [c + 1 for c in range(6)]
+    n = dl.pop(n)
+    if pt < 50:
+        return n
+    elif pt < 60:
+        return dl[0]
+    elif pt < 70:
+        return dl[1]
+    elif pt < 80:
+        return dl[2]
+    elif pt < 90:
+        return dl[3]
+    else:
+        return dl[4]
+
+total = 0
+for i in range(tryCount):
+    ct = 0
+    while True:
+        ct += 1
+        points -= dice(1)
+        if points < 0:
+            points = abs(points)
+        if points == 0:
+            total += ct
+            break
+print(total / tryCount)
 
 
 
