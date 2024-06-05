@@ -41,17 +41,22 @@ print(total / tryCount)
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
+savefig_dir = "/Users/kouji/develop_uc/images"
 sns.set_theme()
-fig, ax = plt.subplots(figsize = (10,5))
-df = pd.read_csv('report8.csv')
-dice = "Dice A"
-datasize = max(df[dice]) - min(df[dice])
-colorList = ["lightcoral", "darkorange", "gold", "limegreen", "darkturquoise", "royalblue", "mediumorchid", "hotpink"]
-sns.barplot(data=df, x='Map', y=dice, label="Dice A", color=colorList[0])
-ax.set(xlabel ='Map', ylabel='ClearTime', ylim=(min(df[dice]) - datasize / 2, max(df[dice]) + datasize / 2))
-ax.legend()
-
+for i in range(6):
+    fig, ax = plt.subplots(figsize = (10,5))
+    df = pd.read_csv('/Users/kouji/develop_uc/ipynb/stats/csv/report8-' + chr(65 + i) + '.csv')
+    dice = "Dice " + chr(65 + i)
+    datasize = max(df[dice]) - min(df[dice])
+    colorList = ["lightcoral", "darkorange", "gold", "limegreen", "darkturquoise", "royalblue", "mediumorchid", "hotpink"]
+    sns.barplot(data=df, x='Map', y=dice, label=dice, color=colorList[i])
+    ax.set(xlabel ='Map', ylabel='ClearTime', ylim=(min(df[dice]) - datasize / 2, max(df[dice]) + datasize / 2))
+    # ax.grid()
+    ax.legend()
+    plt.savefig(os.path.join(savefig_dir, "dice" + str(i + 1) + ".png"))
+    plt.show()
 
 # Extra
 
