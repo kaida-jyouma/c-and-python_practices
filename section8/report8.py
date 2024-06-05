@@ -1,5 +1,5 @@
 # Basic
-tryCount=10000
+tryCount=10000000
 points = 10
 
 def dice(n):
