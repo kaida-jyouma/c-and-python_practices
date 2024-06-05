@@ -100,7 +100,7 @@ plt.show()
 # 8task32
 
 from random import randint as rint
-tryCount = 10000000
+tryCount = 100000
 
 # Unchange
 hitU = 0
@@ -119,13 +119,16 @@ for i in range(tryCount):
 	ans = rint(1, 4)
 	first = rint(1, 4)
 	
-	other = [c for c in [1, 2, 3, 4] if c != ans and c != first]
-	fail = other[rint(0, len(other) - 1)]
+	# other = [c for c in [1, 2, 3, 4] if c != ans and c != first]
+	# fail = other[rint(0, len(other) - 1)]
 	
-	secondls = [c for c in [1, 2, 3, 4] if c != first and c != fail]
-	second = secondls[rint(0, len(secondls) - 1)]
+	# secondls = [c for c in [1, 2, 3, 4] if c != first and c != fail]
+	# second = secondls[rint(0, len(secondls) - 1)]
 	
-	if ans == second:
-		hitC += 1
+	# if ans == second:
+	# 	hitC += 1
+
+	if ans != first:
+		hitC += 1 # change -> win
 
 print(hitC/tryCount)

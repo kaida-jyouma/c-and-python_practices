@@ -1,4 +1,6 @@
 # Basic
+
+# experiment
 tryCount=10000000
 points = 10
 
@@ -33,6 +35,22 @@ for i in range(tryCount):
             break
 print(total / tryCount)
 
+
+# Drawing graph
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set_theme()
+fig, ax = plt.subplots(figsize = (10,5))
+df = pd.read_csv('report8.csv')
+dice = "Dice A"
+datasize = max(df[dice]) - min(df[dice])
+colorList = ["lightcoral", "darkorange", "gold", "limegreen", "darkturquoise", "royalblue", "mediumorchid", "hotpink"]
+sns.barplot(data=df, x='Map', y=dice, label="Dice A", color=colorList[0])
+ax.set(xlabel ='Map', ylabel='ClearTime', ylim=(min(df[dice]) - datasize / 2, max(df[dice]) + datasize / 2))
+ax.legend()
 
 
 # Extra
