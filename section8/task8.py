@@ -76,6 +76,7 @@ def raiseprimes(mxm):
 
 print(raiseprimes(10000))
 # print(len(raiseprimes(10000))) # debug
+print(len(raiseprimes(10000)))
 print([c for n, c in enumerate(raiseprimes(10000)) if n % 111 == 110])
 print()
 

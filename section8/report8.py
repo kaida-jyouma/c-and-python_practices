@@ -43,11 +43,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-savefig_dir = "/Users/kouji/develop_uc/images"
+savefig_dir = "/ ~ path-to-folder ~ "
 sns.set_theme()
 for i in range(6):
     fig, ax = plt.subplots(figsize = (10,5))
-    df = pd.read_csv('/Users/kouji/develop_uc/ipynb/stats/csv/report8-' + chr(65 + i) + '.csv')
+    # needed preparation: convert data to csv file
+    # file name format: "report8-{A~F}.csv"
+    df = pd.read_csv('/ ~ path-to-csv-file ~ /report8-' + chr(65 + i) + '.csv')
     dice = "Dice " + chr(65 + i)
     datasize = max(df[dice]) - min(df[dice])
     colorList = ["lightcoral", "darkorange", "gold", "limegreen", "darkturquoise", "royalblue", "mediumorchid", "hotpink"]
@@ -57,6 +59,7 @@ for i in range(6):
     ax.legend()
     plt.savefig(os.path.join(savefig_dir, "dice" + str(i + 1) + ".png"))
     plt.show()
+
 
 # Extra
 
