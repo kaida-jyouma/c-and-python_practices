@@ -76,7 +76,7 @@ def raiseprimes(mxm):
 
 print(raiseprimes(10000))
 # print(len(raiseprimes(10000))) # debug
-print([c for n, c in enumerate(raiseprimes(10000)) if n % 111 == 1 and n > 111])
+print([c for n, c in enumerate(raiseprimes(10000)) if n % 111 == 110])
 print()
 
 # 8task31
