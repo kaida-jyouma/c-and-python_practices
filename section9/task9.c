@@ -35,10 +35,17 @@ int main(){
 	primeFlags[0] = 1; // 1 is not prime number
 	for (i=0;i<10000;i++){
 		if (primeFlags[i] == 0){
-			// primeFlag == 0 -> the number cannot divide any number other than 1
-			for (int j=i+1;j<)
+			// primeFlags == 0 -> the number cannot divide any number other than 1
+			for (int j=i+1;j<10000;j++){
+				if (primeFlags[j] == 1){
+					continue;
+				}
+				if ((j + 1) % (i + 1) == 0){
+					primeFlags[j] = 1;
+				}
+			}
 		}else{ 
-			// primeFlag == 1 -> divisible by some numbers other than 1
+			// primeFlags == 1 -> divisible by some numbers other than 1
 			continue;
 		}
 	}
