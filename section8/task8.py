@@ -87,7 +87,7 @@ from numpy import array as arr
 n, m, k = [750, 3500, 1000]
 fields = arr([[n], [m], [k]])
 for i in range(360):
-	fields = fields - ((1/100) * arr([[-4, 4, 0], [-6, 3, 3], [0, -1, 1]])) @ arr([[fields[0, 0] - 1000], [fields[1, 0] - 3000], [fields[2, 0]]])
+	fields = fields + ((1/100) * arr([[-4, 4, 0], [-6, 3, 3], [0, -1, 1]])) @ arr([[fields[0, 0] - 1000], [fields[1, 0] - 3000], [fields[2, 0]]])
 	plt.plot(i + 1, fields[0, 0], color="lawngreen", marker=",")
 	plt.plot(i + 1, fields[1, 0], color="deepskyblue", marker=",")
 	plt.plot(i + 1, fields[2, 0], color="darkorange", marker=",")
