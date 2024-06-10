@@ -22,18 +22,19 @@ int main(){
 
 
 
-// 9task22 ..... Under Construcion
+// 9task22 ..... Under Construcion -> Complete
 
 // copy from 8task22 and rewrite in C language
+
+#define MAXIMUM 10000
 
 int main(){
 
 	// Sieve of Eratosthenes
-	int mxm = 10000;
-	int sq_f = floor(sqrt(mxm));
-	int nonprimes[mxm] = {0};
+	int sq_f = floor(sqrt(MAXIMUM));
+	int primeFlags[MAXIMUM] = {0};
 	primeFlags[0] = 1; // 1 is not prime number
-	for (i=0;i<10000;i++){
+	for (int i=0;i<10000;i++){
 		if (primeFlags[i] == 0){
 			// primeFlags == 0 -> the number cannot divide any number other than 1
 			for (int j=i+1;j<10000;j++){
@@ -49,4 +50,22 @@ int main(){
 			continue;
 		}
 	}
+
+	int primect = 0;
+	int primeList[1500] = {0};
+	for (int i=0;i<MAXIMUM;i++){
+		if (primeFlags[i] == 0){
+
+			// make primeList
+			primeList[primect] = i + 1; 
+			
+			// display primeNumber
+			printf("%d ", i + 1);
+			
+			primect ++;
+		}
+	}
+	printf("end\n");
+	printf("%d\n", primect);
+	printf("\n");
 }
