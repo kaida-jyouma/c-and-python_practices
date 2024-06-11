@@ -26,18 +26,32 @@ int main(){
 
 // copy from 8task22 and rewrite in C language
 
-#define MAXIMUM 10000
+/*
+
+#include <stdio.h>
+#include <math.h>
+
+#define MAXIMUM 100000000
+
+int primeFlags[MAXIMUM] = {0};
 
 int main(){
 
 	// Sieve of Eratosthenes
 	int sq_f = floor(sqrt(MAXIMUM));
-	int primeFlags[MAXIMUM] = {0};
+	// int primeFlags[MAXIMUM] = {0}; // -> to global variable
 	primeFlags[0] = 1; // 1 is not prime number
-	for (int i=0;i<10000;i++){
+	printf("start calculating ......\n");
+	for (int i=0;i<MAXIMUM;i++){
+		// progress viewer
+		if (i % (MAXIMUM / 25) == 0){
+			printf("%d\n", i);
+		}
+
+		// calculate system
 		if (primeFlags[i] == 0){
 			// primeFlags == 0 -> the number cannot divide any number other than 1
-			for (int j=i+1;j<10000;j++){
+			for (int j=2*i+1;j<MAXIMUM;j+=(i+1)){
 				if (primeFlags[j] == 1){
 					continue;
 				}
@@ -57,10 +71,10 @@ int main(){
 		if (primeFlags[i] == 0){
 
 			// make primeList
-			primeList[primect] = i + 1; 
+			// primeList[primect] = i + 1; 
 			
 			// display primeNumber
-			printf("%d ", i + 1);
+			// printf("%d ", i + 1);
 			
 			primect ++;
 		}
@@ -69,3 +83,5 @@ int main(){
 	printf("%d\n", primect);
 	printf("\n");
 }
+
+*/
