@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <math.h>
 
 // 9task21
@@ -19,14 +19,14 @@ int gainedScore(int 1, int u1, int u2, int u3){
 int main(){
 	
 }
-
+*/
 
 
 // 9task22 ..... Under Construcion -> Complete
 
 // copy from 8task22 and rewrite in C language
 
-/*
+
 
 #include <stdio.h>
 #include <math.h>
@@ -35,13 +35,30 @@ int main(){
 
 int primeFlags[MAXIMUM] = {0};
 
+int function(int p[], int n){
+	int ct = 0;
+	while (1 == 1){ // while true ~~~
+		if (p[ct] == 0){
+			break;
+		}else{
+			if (n % p[ct] == 0){
+				return 1;
+			}else{
+				return 0;
+			}
+		}
+		ct ++;
+	}
+}
+
 int main(){
 
 	// Sieve of Eratosthenes
 	int sq_f = floor(sqrt(MAXIMUM));
 	// int primeFlags[MAXIMUM] = {0}; // -> to global variable
 	primeFlags[0] = 1; // 1 is not prime number
-	printf("start calculating ......\n");
+	// printf("start calculating ......\n");
+	
 	for (int i=0;i<MAXIMUM;i++){
 		// progress viewer
 		if (i % (MAXIMUM / 25) == 0){
@@ -66,22 +83,29 @@ int main(){
 	}
 
 	int primect = 0;
+	int primect10k = 0;
 	int primeList[1500] = {0};
 	for (int i=0;i<MAXIMUM;i++){
 		if (primeFlags[i] == 0){
 
-			// make primeList
-			// primeList[primect] = i + 1; 
 			
-			// display primeNumber
-			// printf("%d ", i + 1);
+			if (i < 10000){
+				// make primeList
+				primeList[primect] = i + 1; 
 			
+				// display primeNumber
+				printf("%d ", i + 1);
+
+				// count up
+				primect10k ++;
+			}
+
 			primect ++;
 		}
 	}
 	printf("end\n");
+	printf("%d\n", primect10k);
 	printf("%d\n", primect);
 	printf("\n");
 }
 
-*/
