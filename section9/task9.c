@@ -1,12 +1,12 @@
-/*#include <stdio.h>
+#include <stdio.h>
 #include <math.h>
 
 // 9task21
 
-#define NUMBER 200
-#define kamoku_num 4
+#define STUDENTS 200
+#define SUBJECTS 4
 
-int gainedScore(int 1, int u1, int u2, int u3){
+int gainedScore(int i, int u1, int u2, int u3){
 	if ((int)ceil(u1 * sin(u2 * i) + 1) % 4 == 0){
 		return 90 + (int)ceil(10 * pow(sin(u3 * i), 3));
 	}else if ((int)ceil(u1 * sin(u2 * i)) % 2 == 0){
@@ -17,16 +17,31 @@ int gainedScore(int 1, int u1, int u2, int u3){
 }
 
 int main(){
-	
+	int scoreLists[SUBJECTS][STUDENTS] = {0};
+	int coeff[SUBJECTS][3] = {
+		{10000, 20000, 30000},
+		{20000, 30000, 10000},
+		{30000, 10000, 20000},
+		{10000, 20000, 40000}
+	};
+	for (int i=0;i<SUBJECTS;i++){
+		for (int j=0;j<STUDENTS;j++){
+			scoreLists[i][j] = gainedScore(j, coeff[i][0], coeff[i][1], coeff[i][2], coeff[i][3]);
+		}
+	}
+	printf("index: math, engl, phys, prog");
+	for (int i=0;i<STUDENTS;i++){
+		printf("%d: %d, %d, %d\n", scoreLists[0][i], scoreLists[1][i], scoreLists[2][i], scoreLists[3][i]);
+	}
 }
-*/
+
 
 
 // 9task22 ..... Under Construcion -> Complete
 
 // copy from 8task22 and rewrite in C language
 
-
+/*
 
 #include <stdio.h>
 #include <math.h>
@@ -109,3 +124,4 @@ int main(){
 	printf("\n");
 }
 
+*/
