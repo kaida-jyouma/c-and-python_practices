@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <math.h>
 
 // 9task21
@@ -87,12 +87,13 @@ int main(){
 	printf("%lf\n", cov(scoreLists[2], scoreLists[3], STUDENTS / 2));
 }
 
+*/
 
 // 9task22 ..... Under Construcion -> Complete
 
 // copy from 8task22 and rewrite in C language
 
-/*
+
 
 #include <stdio.h>
 #include <math.h>
@@ -177,4 +178,4 @@ int main(){
 	printf("\n");
 }
 
-*/
+
