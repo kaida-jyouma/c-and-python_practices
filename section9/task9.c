@@ -128,7 +128,7 @@ int main(){
 	for (int i=0;i<MAXIMUM;i++){
 		// progress viewer
 		if (i % (MAXIMUM / 25) == 0){
-			printf("%d\n", i);
+			// printf("%d\n", i); // debug
 		}
 
 		// calculate system
@@ -151,9 +151,9 @@ int main(){
 	int primect = 0;
 	int primect10k = 0;
 	int primeList[1500] = {0};
+	printf("prime numbers list (~10k):\n");
 	for (int i=0;i<MAXIMUM;i++){
 		if (primeFlags[i] == 0){
-
 			
 			if (i < 10000){
 				// make primeList
@@ -170,7 +170,9 @@ int main(){
 		}
 	}
 	printf("end\n");
+	printf("The number of prime numbers (~10k): ");
 	printf("%d\n", primect10k);
+	printf("The number of prime numbersb (~100m): ");
 	printf("%d\n", primect);
 	printf("\n");
 }
