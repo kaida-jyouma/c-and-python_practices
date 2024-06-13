@@ -1,8 +1,9 @@
+/*
 #include <stdio.h>
 #include <math.h>
 
 // 7task2.c
-/*
+
 int comb(int n, int k){
 	if (k == 0){
 		return 1;
@@ -21,7 +22,7 @@ int main(){
 
 // 7task3.c
 
-/*
+
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
@@ -99,7 +100,7 @@ int main(){
 	}
 
 }
-*/
+
 
 // 7task4.c
 
@@ -114,8 +115,9 @@ double v_t(double n){
 	if ( n == 0 ) return 4.0;
 	else return (2 * (v_s(n) / v_t(n - 1))) / (1 + v_s(n) / v_t(n - 1)) * v_t(n - 1);
 }
-
+/*
 int main(){
 	for (int i=0;i<13;i++) printf("%lf , %lf\n", v_s((double)i), v_t((double)i));
 	return 0;
 }
+*/
