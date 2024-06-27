@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <math.h>
 
+#define PI = 3.141592653979323846264338327950288419716939937510582897494459230781
+
 int actions_uketori(void){
 	printf("Select:\n");
 	printf("1. Input coefficient (Default: 0)\n");
 	printf("2. Display coefficient\n");
 	printf("3. transition (x axis)\n");
 	printf("4. transition (y axis)\n");
+	printf("5. Rotate around (0, 0)\n");
 	printf("Other: Quit\n");
 
 	int ans;
@@ -98,18 +101,28 @@ void heikouidou_y(double B[][3]){
 	henkan_B_ATBA(B, A);
 }
 
+void rotate0_0(double B[][3]){
+	printf("rotate degree ( around (0,0) / 1~359 ): \n");
+	double Dr;
+	scanf("%lf", &Dr);
+	double rad = Dr * PI / 180;
+	double A[3][3] = {{cos(rad), (-1) * sin(rad), 0}, {sin(rad), cos(rad), 0}, {0, 0, 1}};
+	henkan_B_ATBA(B, A);
+}
+
 int main(void){
-	void (*actions[4])(double B[][3]) = {
+	void (*actions[5])(double B[][3]) = {
 		nyuuryoku_curve,
 		hyouji_curve,
 		heikouidou_x,
-		heikouidou_y
+		heikouidou_y,
+		rotate0_0
 	};
 	double B[3][3] =  {0};
 	int ans;
 	while (1){
 		ans = actions_uketori();
-		if (1 <= ans && ans <= 4){
+		if (1 <= ans && ans <= 5){
 			actions[ans - 1](B);
 		}else{
 			break;
