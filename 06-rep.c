@@ -1,4 +1,4 @@
-// 2610240070 daiju koyama
+// kaida-jyouma
 
 
 #include <stdio.h>
